@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prisoner Release Form - Official Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+        .document {
+            width: 800px;
+            background: #fff;
+            padding: 30px 40px;
+            border: 2px solid #000;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            font-size: 22px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .header h2 {
+            font-size: 16px;
+            font-weight: normal;
+            font-style: italic;
+            margin-top: 5px;
+        }
+        .two-col {
+            display: flex;
+            gap: 20px;
+        }
+        .two-col .col { flex: 1; }
+        .charges-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .charges-table th, .charges-table td {
+            border: 1px solid #000;
+            padding: 6px 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+        .charges-table th {
+            background: #e0e0e0;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+        .signatures {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .signature-line {
+            width: 200px;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 11px;
+            border-top: 1px solid #999;
+            padding-top: 10px;
+            text-align: center;
+            color: #555;
+        }
+        .watermark {
+            position: relative;
+        }
+        .watermark::after {
+            content: "OFFICIAL COPY - RELEASED";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            font-size: 48px;
+            color: rgba(200, 0, 0, 0.08);
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .stamp {
+            border: 2px solid #c00;
+            color: #c00;
+            padding: 5px 10px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            display: inline-block;
+            transform: rotate(-5deg);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="document watermark">
+    <div class="header">
+        <img src="https://i.imgur.com/UYWP2NC.jpeg" alt="Wayland Police Department Badge">
+        <h1>Wayland Police Department</h1>
+        <h2>"To serve and protect our community"</h2>
+        <p style="font-size:12px; margin-top:5px;">41 Cochituate Road • Wayland, Massachusetts 01778 • (508) 358-7701</p>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3 style="text-transform:uppercase; font-size:16px;">Prisoner Release / Discharge Form</h3>
+        <div class="stamp">RELEASED</div>
+    </div>
+    <p style="font-size:11px; margin-bottom:15px;">Form # PD-304-R — This document serves as official proof of release from custody.</p>
+
+    <div class="two-col">
+        <div class="col">
+            <p><strong>Case / Booking #:</strong> 600899AE</p>
+            <p style="margin-top:8px;"><strong>Arrest Date:</strong> 10/09/2026</p>
+            <p style="margin-top:8px;"><strong>Release Date:</strong> 10/10/2026</p>
+        </div>
+        <div class="col">
+            <p><strong>Time of Release:</strong> 01:03 PM</p>
+            <p style="margin-top:8px;"><strong>Arresting Officer:</strong> Joseph Bean</p>
+            <p style="margin-top:8px;"><strong>Badge #:</strong> 01230</p>
+        </div>
+    </div>
+
+    <h4 style="margin-top:20px; text-transform:uppercase; font-size:14px; border-bottom:1px solid #000;">Prisoner Information</h4>
+    <div class="two-col" style="margin-top:8px;">
+        <div class="col">
+            <p><strong>Last Name:</strong> Martin</p>
+            <p style="margin-top:8px;"><strong>First Name:</strong> Matthew</p>
+            <p style="margin-top:8px;"><strong>Middle Initial:</strong> J.</p>
+        </div>
+        <div class="col">
+            <p><strong>Date of Birth:</strong> 01/20/1986</p>
+            <p style="margin-top:8px;"><strong>Social Security #:</strong> 026-66-7540</p>
+            <p style="margin-top:8px;"><strong>Phone:</strong> (781) 350-8185</p>
+        </div>
+    </div>
+    <p style="margin-top:8px;"><strong>Address:</strong> 18 Fairmont Terrace, Malden, MA 02148</p>
+
+    <h4 style="margin-top:20px; text-transform:uppercase; font-size:14px; border-bottom:1px solid #000;">Charges Held / Filed</h4>
+    <table class="charges-table">
+        <tr>
+            <th style="width:40px;">#</th>
+            <th>Charge Description</th>
+            <th style="width:100px;">Code Section</th>
+            <th style="width:80px;">Level</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Unregistered Motor Vehicle</td>
+            <td>C90 S9</td>
+            <td>Warning</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>No Inspection Sticker</td>
+            <td>C90 S20</td>
+            <td>Warning</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>License Not in Possession</td>
+            <td>C90 S11/A</td>
+            <td>Warning</td>
+        </tr>
+    </table>
+
+    <h4 style="margin-top:15px; text-transform:uppercase; font-size:14px; border-bottom:1px solid #000;">Release Conditions / Notes</h4>
+    <p style="margin-top:8px;">
+        &#9745; Released on own recognizance (ROR)<br>
+        &#9744; Bail posted — Amount: $_______________<br>
+        &#9744; Transferred to _______________<br>
+        &#9744; Charges dropped / dismissed<br>
+        &#9744; Citation / summons issued<br>
+        &#9744; Other: ___________________________________________
+    </p>
+    <p style="margin-top:10px;"><strong>Additional Notes:</strong></p>
+    <div style="border:1px solid #000; height:60px; padding:5px; font-size:12px; color:#888;">&nbsp;</div>
+
+    <div class="signatures">
+        <div class="signature-line">Matthew J. Martin<br>Signature of Prisoner</div>
+        <div class="signature-line">Sgt. Sean Fitzgerald<br>Signature of Release Officer</div>
+        <div class="signature-line">___________________<br>Magistrate / Judge Approval</div>
+    </div>
+
+    <p style="margin-top:15px; font-size:11px;">
+        <strong>Property Returned:</strong> Yes &nbsp;&nbsp;
+        Items: Wallet, Sunglasses, Bracelet, $3.00 cash
+    </p>
+
+    <div class="footer">
+        This is an official document of the Wayland Police Department. Any alteration or forgery is punishable under law.<br>
+        Retain this copy for your records. If you have questions, contact the Detention Division at (508) 358-7701.
+    </div>
+
+    <div style="margin-top:15px; border-top:2px solid #000; padding-top:10px; font-size:10px; display:flex; justify-content:space-between;">
+        <span>PD-304-R (Rev. 2026)</span>
+        <span>Distribution: White - Prisoner / Yellow - File / Pink - Court</span>
+    </div>
+</div>
+</body>
+</html>
